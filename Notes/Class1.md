@@ -7,7 +7,9 @@
 ###### Maybe in other js versions
 You can use
 > ()=>{}
+
 instead of
+
 > function () {}
 
 
