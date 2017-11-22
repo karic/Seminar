@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="/javascripts/index.js"><</script>
+  </head>
+  <body onload="refresh()">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+
+    <input type="text" width="200px" id="msg">
+    <input type="button" value="send" onclick="sendMessage()">
+
+    <div id="chat">
+
+    </div>
+
+  </body>
+</html>
