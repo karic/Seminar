@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        function sendMessage() {
+            let us=$("#us").val();
+            let pw=$("#pw").val();
+            $.ajax({
+                method: "POST",
+                url: "/login",
+                data: {user: us, password: pw},
+                success: function (response) {
+                    document.cookie="userName=" + response;
+                    window.location.replace("http://localhost:3000/chat");
+                }
+            })
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<input type="text" width="200px" id="us">
+<input type="password" width="200px" id="pw">
+<input type="button" value="send" onclick="sendMessage()">
+</body>
+</html>
